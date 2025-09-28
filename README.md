@@ -128,28 +128,49 @@ install.packages(c("survival", "glmnet", "randomForestSRC", "ggplot2", "vegan", 
 
 ```
 CANVAS/
-├── README.md                          # Project documentation and usage instructions
-
-├── Demo_data/                         # Example dataset
-│   └── Spatial_feature_matrix.csv     # CANVAS-derived spatial feature matrix for each sample
-
-├── Habitat_prediction/                # Module 1: CN-to-habitat prediction via a vision–language foundation model
-│   ├── cn_assignment.py               # Co-registration of CODEX and H&E images at single-cell resolution
-│   ├── habitat_prediction.py          # Predicts ecological habitats from CN annotations
-│   └── habitat_training.py            # Trains vision–language model for habitat prediction
-
-├── Feature_generation/                # Module 2: Habitat-level spatial feature generation
-│   └── Spatial_metrics.R              # Calculates composition, diversity, interaction, and other spatial metrics
-
-├── Feature_selection_modeling/        # Module 3: Feature selection and prognostic modeling
-│   └── feature_selection_modeling.R   # Performs Bootstrap LASSO, random forest, and Cox regression modeling
-
-├── AI_agent/                          # Module 4: AI-Agent module for spatial feature interpretation
-│   └── AI_agent.py                    # Interactive agent for habitat-level biological and clinical annotation
-
-├── Abstruct_figure/                   # Folder for figures used in the abstract or main text
-
-
+│
+│   demo.ipynb                 # Example Jupyter notebook demonstrating CANVAS workflow
+│   README.md                  # Project documentation and usage instructions
+│   requirements.txt           # Python dependencies for running CANVAS
+│
+├── Abstruct_figure/           # Figures used for abstract or manuscript illustration
+│   └── CANVAS_image.png       # Overview figure of the CANVAS framework
+│
+├── AI_Agent/                  # Module 4: AI-Agent for spatial feature interpretation
+│   │   Instruction for AI agent.docx   # Documentation of AI-agent usage
+│   │   README.md                        # Module-specific documentation
+│   │   requirements.txt                 # Dependencies for AI-agent module
+│   │   run.py                           # Main script to launch AI-agent
+│   │   spatial_agent.py                 # Core implementation of AI-agent
+│   │
+│   └── data/                            # Supporting annotation files for AI-agent
+│       ├── Feature_annotation.xlsx      # Definitions and biological annotation of spatial features
+│       └── Habitat_annotation.docx      # Annotation of habitats and ecological interpretation
+│
+├── Demo_data/                 # Example datasets for demonstration
+│   ├── 39936_25600.png        # Example tissue image (demo figure)
+│   ├── sample_img.png         # Demo sample image for testing
+│   ├── output.csv             # Example model output (demo results)
+│   └── Spatial_feature_matrix.csv  # Example CANVAS-derived spatial feature matrix for each sample
+│
+├── Feature_generation/        # Module 2: Habitat-level spatial feature generation
+│   ├── Distance_calculation.py  # Computes pairwise distances among habitats/cells
+│   ├── Habitat_freq.R           # Quantifies habitat frequency per sample
+│   ├── Habitat_interaction.py   # Computes inter-habitat interactions
+│   ├── Spatial_diversity.R      # Calculates diversity indices (Shannon, Simpson, etc.)
+│   ├── Spatial_entropy.R        # Computes spatial transition entropy (STE)
+│   └── Spatial_metrics.R        # Master script for composition, diversity, interaction, distance metrics
+│
+├── Feature_selection_modeling/   # Module 3: Feature selection and prognostic modeling
+│   └── feature_selection_modeling.R  # Performs Bootstrap LASSO, random forest, Cox regression
+│
+└── Habitat_prediction/         # Module 1: CN-to-habitat prediction using vision–language model
+    ├── api.py                  # API wrapper for model inference
+    ├── cn_assignment.py        # Co-registers CODEX and H&E images at single-cell resolution
+    ├── habitat_prediction.py   # Predicts ecological habitats from CN annotations
+    ├── habitat_training.py     # Trains the vision–language model for habitat prediction
+    ├── model.py                # Core model architecture definition
+    └── reference_weight.pth    # Pre-trained model weights for habitat prediction
 ```
 
 ### Basic Usage
