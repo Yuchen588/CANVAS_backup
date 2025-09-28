@@ -101,7 +101,7 @@ python AI_Agent/run.py
 - Immunotherapy response stratification in NSCLC and other solid tumors using spatially resolved habitat features
 - Habitat-informed prognostic modeling across large-scale cohorts including TCGA, PLCO, and NLST
 - Patient subtyping independent of PD-L1 expression levels or canonical oncogenic mutations (e.g., EGFR, KRAS)
-- Virtual spatial proteomic annotation directly inferred from standard H&E histology, enabling scalable tissue profiling without multiplex staining
+- Virtual reconstruction of the tumor–immune ecosystem directly from routine H&E histology, enabling scalable tissue profiling without multiplex staining
 
 ---
 
@@ -198,7 +198,7 @@ CANVAS/
     ├── habitat_prediction.py   # Predicts ecological habitats from CN annotations
     ├── habitat_training.py     # Trains the vision–language model for habitat prediction
     ├── model.py                # Core model architecture definition
-    └── reference_weight.pth    # Pre-trained model weights for habitat prediction (available at Zenodo: 10.5281/zenodo.17220060)
+    └── reference_weight.pth    # Pre-trained model weights for habitat prediction (available at Zenodo: [10.5281/zenodo.17220060](https://zenodo.org/records/17220060))
 ```
 
 ### 📄 Citation
