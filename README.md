@@ -105,7 +105,7 @@ python AI_Agent/run.py
 
 ---
 
-### 📦 Installation
+### 📦 Installation and Basic Usage
 
 We recommend using `conda` to manage environments for CANVAS.
 
@@ -121,6 +121,34 @@ R packages used include:
 ```r
 install.packages(c("survival", "glmnet", "randomForestSRC", "ggplot2", "vegan", "entropy", "spatstat"))
 ```
+
+### Basic Usage
+1. Load the model
+```bash
+from Habitat_prediction.api import load_model, predict_folder
+
+model, device = load_model(
+    #weights=str(WEIGHTS_PATH),    # optional: local weights only
+    musk_source=MUSK_SOURCE,      # hf_hub or local path to MUSK backbone
+)
+print("Loaded model on:", device)
+```
+2. Run inference on all images under the folder
+```bash
+import pandas as pd
+from pathlib import Path
+
+df = predict_folder(
+    model, device, DEMO_DIR,
+    img_size=384, batch_size=64,
+)
+
+OUT_DIR = Path("Demo_data"); OUT_DIR.mkdir(exist_ok=True)
+out_csv = OUT_DIR / "output.csv"
+df.to_csv(out_csv, index=False)
+print("Saved")
+```
+
 
 ---
 
@@ -171,33 +199,6 @@ CANVAS/
     ├── habitat_training.py     # Trains the vision–language model for habitat prediction
     ├── model.py                # Core model architecture definition
     └── reference_weight.pth    # Pre-trained model weights for habitat prediction
-```
-
-### Basic Usage
-1. Load the model
-```bash
-from Habitat_prediction.api import load_model, predict_folder
-
-model, device = load_model(
-    #weights=str(WEIGHTS_PATH),    # optional: local weights only
-    musk_source=MUSK_SOURCE,      # hf_hub or local path to MUSK backbone
-)
-print("Loaded model on:", device)
-```
-2. Run inference on all images under the folder
-```bash
-import pandas as pd
-from pathlib import Path
-
-df = predict_folder(
-    model, device, DEMO_DIR,
-    img_size=384, batch_size=64,
-)
-
-OUT_DIR = Path("Demo_data"); OUT_DIR.mkdir(exist_ok=True)
-out_csv = OUT_DIR / "output.csv"
-df.to_csv(out_csv, index=False)
-print("Saved")
 ```
 
 ### 📄 Citation
