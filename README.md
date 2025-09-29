@@ -11,7 +11,7 @@
 </td>
 <td width="60%" align="center" valign="middle">
 
-<img src="https://github.com/lilab-stanford/CANVAS/blob/main/Abstract_figure/CANVAS_image.png">
+<img src="https://github.com/lilab-stanford/CANVAS/blob/main/Abstruct_figure/CANVAS_image.png">
 
 </td>
 </tr>
