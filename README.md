@@ -162,7 +162,7 @@ CANVAS/
 │   requirements.txt           # Python dependencies for running CANVAS
 │
 ├── Abstruct_figure/           # Figures used for abstract or manuscript illustration
-│   └── CANVAS_image.png       # Overview figure of the CANVAS framework
+│   └── CANVAS_image.png       # Thumbnail of CANVAS
 │
 ├── AI_Agent/                  # Module 4: AI-Agent for spatial feature interpretation
 │   │   Instruction for AI agent.docx   # Documentation of AI-agent usage
@@ -176,18 +176,17 @@ CANVAS/
 │       └── Habitat_annotation.docx      # Annotation of habitats and ecological interpretation
 │
 ├── Demo_data/                 # Example datasets for demonstration
-│   ├── 39936_25600.png        # Example tissue image (demo figure)
-│   ├── sample_img.png         # Demo sample image for testing
+│   ├── 28000_56224.png        # Example tissue image (demo figure)
+│   ├── 67424_15680.png        # Example tissue image (demo figure)
 │   ├── output.csv             # Example model output (demo results)
-│   └── Spatial_feature_matrix.csv  # Example CANVAS-derived spatial feature matrix for each sample
 │
 ├── Feature_generation/        # Module 2: Habitat-level spatial feature generation
-│   ├── Distance_calculation.py  # Computes pairwise distances among habitats/cells
+│   ├── Distance_calculation.py  # Computes pairwise distances among habitats
 │   ├── Habitat_freq.R           # Quantifies habitat frequency per sample
 │   ├── Habitat_interaction.py   # Computes inter-habitat interactions
 │   ├── Spatial_diversity.R      # Calculates diversity indices (Shannon, Simpson, etc.)
 │   ├── Spatial_entropy.R        # Computes spatial transition entropy (STE)
-│   └── Spatial_metrics.R        # Master script for composition, diversity, interaction, distance metrics
+│   └── Spatial_metrics.R        # Master script for habitat-level spatial dispersion
 │
 ├── Feature_selection_modeling/   # Module 3: Feature selection and prognostic modeling
 │   └── feature_selection_modeling.R  # Performs Bootstrap LASSO, random forest, Cox regression
