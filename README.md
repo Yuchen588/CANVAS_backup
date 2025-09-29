@@ -1,20 +1,21 @@
 # CANVAS
 
-<div style="display:flex; align-items:center;">
+<table>
+<tr>
+<td width="60%" valign="top">
 
-  <div style="flex:6; padding-right:20px;">
+### A cross-modality AI framework for ecological habitat reconstruction from histopathology
 
-  ### A cross-modality AI framework for ecological habitat reconstruction from histopathology
+**CANVAS** (***C**ellular **A**rchitecture and **N**eighborhood-informed **V**irtual **A**I-driven **S**patial profiling*) is a biologically grounded, cross-modality AI framework that integrates high-dimensional spatial proteomics with routine histopathology to reconstruct, quantify, and model tumor ecological habitats directly from H&E-stained tissue sections. By learning to transfer CODEX-defined cellular neighborhoods (CNs) onto native histology, CANVAS enables accurate and scalable inference of spatial habitats across whole-slide images. This cross-modality alignment is powered by vision–language foundation modeling, refined through AI-agent–guided biological interpretation, and optimized via efficient spatial feature selection and machine learning–based prognostic modeling. Spanning single-cell resolution to population-scale clinical inference, CANVAS builds a functional bridge between spatial biology and precision oncology, enabling interpretable and translatable spatial biomarker discovery.
 
-  **CANVAS** (***C**ellular **A**rchitecture and **N**eighborhood-informed **V**irtual **A**I-driven **S**patial profiling*) is a biologically grounded, cross-modality AI framework that integrates high-dimensional spatial proteomics with routine histopathology to reconstruct, quantify, and model tumor ecological habitats directly from H&E-stained tissue sections. By learning to transfer CODEX-defined cellular neighborhoods (CNs) onto native histology, CANVAS enables accurate and scalable inference of spatial habitats across whole-slide images. This cross-modality alignment is powered by vision–language foundation modeling, refined through AI-agent–guided biological interpretation, and optimized via efficient spatial feature selection and machine learning–based prognostic modeling. Spanning single-cell resolution to population-scale clinical inference, CANVAS builds a functional bridge between spatial biology and precision oncology, enabling interpretable and translatable spatial biomarker discovery.
+</td>
+<td width="60%" align="center" valign="middle">
 
-  </div>
+<img src="https://github.com/lilab-stanford/CANVAS/blob/main/Abstruct_figure/CANVAS_image.png">
 
-  <div style="flex:4; text-align:center;">
-    <img src="https://github.com/lilab-stanford/CANVAS/blob/main/Abstract_figure/CANVAS_image.png" width="95%">
-  </div>
-
-</div>
+</td>
+</tr>
+</table>
 
 
 ### 🔧 Key Modules
