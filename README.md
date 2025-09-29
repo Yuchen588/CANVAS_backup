@@ -86,6 +86,13 @@ The agent generates structured, human-interpretable outputs across five key biol
 - (iv) Tendency for topological coupling with other habitats
 - (v) Potential biological and clinical relevance
 
+**Setup:**
+
+```bash
+export OPENAI_API_KEY="<your-openai-api-key>"
+# Optional: only if you route through a custom endpoint
+export OPENAI_BASE_URL="https://your-custom-endpoint"
+```
 **Run:**
 
 ```bash
