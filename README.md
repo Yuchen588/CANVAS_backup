@@ -164,7 +164,7 @@ CANVAS/
 │   README.md                  # Project documentation and usage instructions
 │   requirements.txt           # Python dependencies for running CANVAS
 │
-├── Abstruct_figure/           # Figures used for abstract or manuscript illustration
+├── Abstract_figure/           # Figures used for abstract or manuscript illustration
 │   └── CANVAS_image.png       # Thumbnail of CANVAS
 │
 ├── AI_Agent/                  # Module 4: AI-Agent for spatial feature interpretation
