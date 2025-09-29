@@ -128,10 +128,13 @@ install.packages(c("survival", "glmnet", "randomForestSRC", "ggplot2", "vegan", 
 from Habitat_prediction.api import load_model, predict_folder
 
 model, device = load_model(
-    #weights=str(WEIGHTS_PATH),    # optional: local weights only
+    # weights=str(WEIGHTS_PATH),    # optional: specify custom path if not using default
+    # By default, CANVAS will look for `reference_weight.pth` under Habitat_prediction/  
+    # Reference model weights available at Zenodo: https://doi.org/10.5281/zenodo.17220060
     musk_source=MUSK_SOURCE,      # hf_hub or local path to MUSK backbone
 )
 print("Loaded model on:", device)
+
 ```
 2. Run inference on all images under the folder
 ```bash
