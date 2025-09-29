@@ -208,7 +208,7 @@ CANVAS/
     ├── habitat_prediction.py   # Predicts ecological habitats from CN annotations
     ├── habitat_training.py     # Trains the vision–language model for habitat prediction
     ├── model.py                # Core model architecture definition
-    └── reference_weight.pth    # Pre-trained model weights for habitat prediction (available at Zenodo: [10.5281/zenodo.17220060](https://zenodo.org/records/17220060))
+    └── reference_weight.pth    # Reference model weights for habitat prediction (available at Zenodo: [10.5281/zenodo.17220060](https://zenodo.org/records/17220060))
 ```
 
 ### 📄 Citation
