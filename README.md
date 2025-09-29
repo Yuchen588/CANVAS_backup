@@ -118,7 +118,7 @@ python AI_Agent/run.py
 We recommend using `conda` to manage environments for CANVAS.
 
 ```bash
-Please install MUSK first (required)
+Please install MUSK first (required) `https://github.com/lilab-stanford/MUSK`
 conda create -n canvas_env python=3.8
 conda activate canvas_env
 pip install -r requirements.txt
