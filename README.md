@@ -24,7 +24,7 @@
 
 CANVAS leverages a vision–language foundation model trained on paired CODEX and H&E whole-slide images to infer CN-defined ecological habitats directly from unannotated histology. This module integrates:
 
-- Use the palom package to co-register CODEX and H&E images, and to map CODEX-defined cellular neighborhoods onto histology
+- Co-register CODEX and H&E images at single-cell resolution and map CODEX-defined cellular neighborhoods onto histology
 - Use cn_assignment to generate habitat labels for training and validation
 - Train a vision–language model to predict habitat classes from H&E images based on the co-registered CNs
 - Predict habitat classes on H&E images using the trained model
@@ -45,8 +45,8 @@ For each inferred habitat, CANVAS extracts a suite of biologically interpretable
 
 - **Composition:** Quantifies the relative abundance of each spatial habitat within the tissue section
 - **Diversity:** Measures habitat heterogeneity using metrics such as Shannon index, Fisher’s alpha, and richness
-- **Spatial dispersion:** Captures habitat-level spatial organization using Ripley’s K, L, and F functions, Clark–Evans index, and kernel density
-- **Interaction:** Quantifies pairwise spatial relationships between habitats using permutation-based analysis
+- **Spatial dispersion:** Describes habitat spatial distribution based on Ripley’s K, L, and F functions, as well as related metrics
+- **Interaction:** Quantifies pairwise spatial associations between habitats using permutation-based analysis
 - **Distance:** Computes directional Euclidean distances between habitat pairs
 - **Transition entropy:** Non-Euclidean metrics reflecting the internal complexity and interfacial dynamics of the spatial architecture
 
@@ -73,7 +73,7 @@ To identify clinically meaningful spatial biomarkers, CANVAS performs:
 Rscript Feature_selection_modeling/feature_selection_modeling.R
 ```
 
-**Output:** Refined biomarker panels and risk prediction models for immunotherapy outcomes.
+**Output:** Refined panels of spatial biomarkers and risk prediction models with translational relevance for immunotherapy.
 
 #### (4) AI-Agent module for spatial feature interpretation
 
