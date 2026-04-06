@@ -150,6 +150,13 @@ print("Saved")
 │   │   ├── 67424_15680.png        # Example tissue image (demo figure)
 │   │   ├── output.csv             # Example model output (demo results)
 │   │
+│   ├── Habitat_prediction/        # Module 1: CN-to-habitat prediction using vision–language model
+│   │   ├── api.py                 # API wrapper for model inference
+│   │   ├── cn_assignment.py       # Co-registers CODEX and H&E images at single-cell resolution
+│   │   ├── habitat_prediction.py  # Predicts ecological habitats from CN annotations
+│   │   ├── habitat_training.py    # Trains the vision–language model for habitat prediction
+│   │   └── model.py               # Core model architecture definition
+│   │
 │   ├── Feature_generation/        # Module 2: Habitat-level spatial feature generation
 │   │   ├── Distance_calculation.py  # Computes pairwise distances among habitats
 │   │   ├── Habitat_freq.R           # Quantifies habitat frequency per sample
@@ -158,15 +165,8 @@ print("Saved")
 │   │   ├── Spatial_entropy.R        # Computes spatial transition entropy (STE)
 │   │   └── Spatial_metrics.R        # Master script for habitat-level spatial dispersion
 │   │
-│   ├── Feature_selection_modeling/   # Module 3: Feature selection and prognostic modeling
-│   │   └── feature_selection_modeling.R  # Performs Bootstrap LASSO, random forest, Cox regression
-│   │
-│   └── Habitat_prediction/         # Module 1: CN-to-habitat prediction using vision–language model
-│       ├── api.py                  # API wrapper for model inference
-│       ├── cn_assignment.py        # Co-registers CODEX and H&E images at single-cell resolution
-│       ├── habitat_prediction.py   # Predicts ecological habitats from CN annotations
-│       ├── habitat_training.py     # Trains the vision–language model for habitat prediction
-│       └── model.py     # Core model architecture definition
+│   └── Feature_selection_modeling/   # Module 3: Feature selection and prognostic modeling
+│       └── feature_selection_modeling.R  # Performs Bootstrap LASSO, random forest, Cox regression
 │
 └── Downstream_Analysis/
     │
