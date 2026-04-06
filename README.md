@@ -136,8 +136,6 @@ print("Saved")
 ### 📂 Directory Structure
 
 ```
-Project/
-│
 ├── CANVAS/
 │   │
 │   │   demo.ipynb                 # Example Jupyter notebook demonstrating CANVAS workflow
@@ -168,7 +166,7 @@ Project/
 │       ├── cn_assignment.py        # Co-registers CODEX and H&E images at single-cell resolution
 │       ├── habitat_prediction.py   # Predicts ecological habitats from CN annotations
 │       ├── habitat_training.py     # Trains the vision–language model for habitat prediction
-│       └── model.py                # Core model architecture definition
+│       └── model.py     # Core model architecture definition
 │
 └── Downstream_Analysis/
     │
