@@ -75,33 +75,6 @@ Rscript Feature_selection_modeling/feature_selection_modeling.R
 
 **Output:** Refined panels of spatial biomarkers and risk prediction models with translational relevance for immunotherapy.
 
-#### (4) AI-Agent module for spatial feature interpretation
-
-CANVAS incorporates a large language model (LLM)-driven AI agent to facilitate the systematic interpretation of high-dimensional spatial features by linking them to underlying spatial biology and relevant clinical priors.
-
-The agent generates structured, human-interpretable outputs across five key biological dimensions:
-
-- (i) Feature category
-- (ii) Characteristic cellular composition of the associated habitat
-- (iii) Description of the encoded spatial property
-- (iv) Tendency for topological coupling with other habitats
-- (v) Potential biological and clinical relevance
-
-**Setup:**
-
-```bash
-export OPENAI_API_KEY="<your-openai-api-key>"
-# Optional: only if you route through a custom endpoint
-export OPENAI_BASE_URL="https://your-custom-endpoint"
-```
-**Run:**
-
-```bash
-python AI_Agent/run.py
-```
-**Note:** Replace the default API key with your own in spatial_agent.py.
-**Output:** An interpretable annotation layer that contextualizes model-derived spatial features within tissue architecture, ecological topology, and clinical significance.
-
 ---
 
 ### 🔬 Applications
@@ -172,17 +145,6 @@ CANVAS/
 ├── Abstract_figure/           # Figures used for abstract or manuscript illustration
 │   └── CANVAS_image.png       # Thumbnail of CANVAS
 │
-├── AI_Agent/                  # Module 4: AI-Agent for spatial feature interpretation
-│   │   Instruction for AI agent.docx   # Documentation of AI-agent usage
-│   │   README.md                        # Module-specific documentation
-│   │   requirements.txt                 # Dependencies for AI-agent module
-│   │   run.py                           # Main script to launch AI-agent
-│   │   spatial_agent.py                 # Core implementation of AI-agent
-│   │
-│   └── data/                            # Supporting annotation files for AI-agent
-│       ├── Feature_annotation.xlsx      # Definitions and biological annotation of spatial features
-│       └── Habitat_annotation.docx      # Annotation of habitats and ecological interpretation
-│
 ├── Demo_data/                 # Example datasets for demonstration
 │   ├── 28000_56224.png        # Example tissue image (demo figure)
 │   ├── 67424_15680.png        # Example tissue image (demo figure)
@@ -204,8 +166,7 @@ CANVAS/
     ├── cn_assignment.py        # Co-registers CODEX and H&E images at single-cell resolution
     ├── habitat_prediction.py   # Predicts ecological habitats from CN annotations
     ├── habitat_training.py     # Trains the vision–language model for habitat prediction
-    ├── model.py                # Core model architecture definition
-    └── reference_weight.pth    # Reference model weights for habitat prediction (available at Zenodo: [10.5281/zenodo.17220060](https://zenodo.org/records/17220060))
+    └── model.py     # Core model architecture definition
 ```
 
 ### 📄 Citation
@@ -225,3 +186,4 @@ Project maintained by the Department of Radiation Oncology, Stanford University.
 
 We thank the developers of core tools and libraries including CODEX, Seurat, and PyTorch.\
 This work was supported by funding from the National Institutes of Health (NIH).
+
